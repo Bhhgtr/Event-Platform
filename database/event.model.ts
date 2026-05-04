@@ -164,7 +164,7 @@ function normalizeTime(timeString: string): string {
   let hours = parseInt(match[1]);
   const minutes = match[2];
   const period = match[4]?.toUpperCase();
-  
+   
   if (period) {
     // Convert 12-hour to 24-hour format
     if (period === 'PM' && hours !== 12) hours += 12;
