@@ -30,7 +30,6 @@ const EventSchema = new Schema<IEvent>(
     },
     slug: {
       type: String,
-      unique: true,
       lowercase: true,
       trim: true,
     },
@@ -128,7 +127,6 @@ EventSchema.pre('save', function (next) {
     event.time = normalizeTime(event.time);
   }
 
-  next();
 });
 
 // Helper function to generate URL-friendly slug
